@@ -1,0 +1,7 @@
+<ng-container *ngFor="let word of words">
+  <span>{{word}}</span>
+</ng-container>
+
+<input [(ngModel)]="inputWord" type="text">
+
+<button (click)="onAddWord()">Add word</button>

@@ -1,0 +1,27 @@
+<input type="text" [(ngModel)]="propertyBagService.label" />
+
+<button (click)="showBag1 = !showBag1">toggle</button>
+<ng-container *ngIf="showBag1">
+  <app-bag-label></app-bag-label>
+</ng-container>
+
+<button (click)="showBag2 = !showBag2">toggle</button>
+<ng-container *ngIf="showBag2">
+  <app-bag-label></app-bag-label>
+</ng-container>
+
+<button (click)="showBag3 = !showBag3">toggle</button>
+<ng-container *ngIf="showBag3">
+  <app-bag-label></app-bag-label>
+</ng-container>
+
+<br>
+
+<app-words-display></app-words-display>
+
+<br>
+
+<app-notification-semaphor></app-notification-semaphor>
+<button (click)="notificationStateManagementService.setColor('red')">red</button>
+<button (click)="notificationStateManagementService.setColor('yellow')">yellow</button>
+<button (click)="notificationStateManagementService.setColor('green')">green</button>

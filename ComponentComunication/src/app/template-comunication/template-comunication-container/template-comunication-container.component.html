@@ -1,0 +1,10 @@
+<div>
+  <p>Two ways binding counter {{counter1}}</p>
+  <app-counter [(count)]="counter1"></app-counter>
+</div>
+
+
+<div appGeneric>
+  <p>ViewChild binding counter {{counter1}}</p>
+  <app-counter #counterViewChild [(count)]="counter1"></app-counter>
+</div>

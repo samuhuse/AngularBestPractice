@@ -1,0 +1,51 @@
+@import "utils";
+
+/*:host taget the component tag*/
+:host {
+  @include gradient-background(var(--primary-color, red), blue);
+  border: 2px solid black;
+  border-radius: 0.5em;
+
+  /*custom tags haven't default style*/
+  display: flex;
+  flex-direction: column;
+}
+
+
+.primary {
+  font-size: 1.5rem
+}
+
+.secondary {
+  margin: 2rem 2rem;
+  font-size: 1rem
+}
+
+.items {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*::ng-deep taget projected tags*/
+
+:host .primary ul ::ng-deep a {
+  color: antiquewhite;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+:host .secondary ul ::ng-deep a {
+  color: black;
+  padding: 0 1em;
+  text-decoration: none;
+}
+
+:host {
+
+  .primary ul ::ng-deep a:hover,
+  .secondary ul ::ng-deep a:hover {
+    text-decoration: underline;
+  }
+}
